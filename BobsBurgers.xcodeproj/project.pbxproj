@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01B666FD14441D1C00CD4821 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B666FC14441D1C00CD4821 /* UIKit.framework */; };
+		01B666FF14441D1C00CD4821 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B666FE14441D1C00CD4821 /* Foundation.framework */; };
+		01B6670114441D1C00CD4821 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B6670014441D1C00CD4821 /* CoreGraphics.framework */; };
+		01B6670714441D1C00CD4821 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01B6670514441D1C00CD4821 /* InfoPlist.strings */; };
+		01B6670914441D1C00CD4821 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B6670814441D1C00CD4821 /* main.m */; };
+		01B6670D14441D1C00CD4821 /* BobsBurgersAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B6670C14441D1C00CD4821 /* BobsBurgersAppDelegate.m */; };
+		01B6671014441D1C00CD4821 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B6670E14441D1C00CD4821 /* MainWindow.xib */; };
+		01B6671814441D1D00CD4821 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B6671714441D1C00CD4821 /* SenTestingKit.framework */; };
+		01B6671914441D1D00CD4821 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B666FC14441D1C00CD4821 /* UIKit.framework */; };
+		01B6671A14441D1D00CD4821 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B666FE14441D1C00CD4821 /* Foundation.framework */; };
+		01B6671B14441D1D00CD4821 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B6670014441D1C00CD4821 /* CoreGraphics.framework */; };
+		01B6672314441D1D00CD4821 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01B6672114441D1D00CD4821 /* InfoPlist.strings */; };
+		01B6672514441D1D00CD4821 /* BobsBurgersTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 01B6672414441D1D00CD4821 /* BobsBurgersTests.h */; };
+		01B6672714441D1D00CD4821 /* BobsBurgersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B6672614441D1D00CD4821 /* BobsBurgersTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01B6671C14441D1D00CD4821 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01B666EF14441D1C00CD4821 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01B666F714441D1C00CD4821;
+			remoteInfo = BobsBurgers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01B666F814441D1C00CD4821 /* BobsBurgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobsBurgers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B666FC14441D1C00CD4821 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		01B666FE14441D1C00CD4821 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		01B6670014441D1C00CD4821 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		01B6670414441D1C00CD4821 /* BobsBurgers-Info.plist */ = {isa = PBXFileReference; path = "BobsBurgers-Info.plist"; sourceTree = "<group>"; };
+		01B6670614441D1C00CD4821 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		01B6670814441D1C00CD4821 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		01B6670A14441D1C00CD4821 /* BobsBurgers-Prefix.pch */ = {isa = PBXFileReference; path = "BobsBurgers-Prefix.pch"; sourceTree = "<group>"; };
+		01B6670B14441D1C00CD4821 /* BobsBurgersAppDelegate.h */ = {isa = PBXFileReference; path = BobsBurgersAppDelegate.h; sourceTree = "<group>"; };
+		01B6670C14441D1C00CD4821 /* BobsBurgersAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BobsBurgersAppDelegate.m; sourceTree = "<group>"; };
+		01B6670F14441D1C00CD4821 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		01B6671614441D1C00CD4821 /* BobsBurgersTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BobsBurgersTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B6671714441D1C00CD4821 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		01B6672014441D1D00CD4821 /* BobsBurgersTests-Info.plist */ = {isa = PBXFileReference; path = "BobsBurgersTests-Info.plist"; sourceTree = "<group>"; };
+		01B6672214441D1D00CD4821 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		01B6672414441D1D00CD4821 /* BobsBurgersTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BobsBurgersTests.h; sourceTree = "<group>"; };
+		01B6672614441D1D00CD4821 /* BobsBurgersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BobsBurgersTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01B666F514441D1C00CD4821 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B666FD14441D1C00CD4821 /* UIKit.framework in Frameworks */,
+				01B666FF14441D1C00CD4821 /* Foundation.framework in Frameworks */,
+				01B6670114441D1C00CD4821 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01B6671214441D1C00CD4821 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B6671814441D1D00CD4821 /* SenTestingKit.framework in Frameworks */,
+				01B6671914441D1D00CD4821 /* UIKit.framework in Frameworks */,
+				01B6671A14441D1D00CD4821 /* Foundation.framework in Frameworks */,
+				01B6671B14441D1D00CD4821 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01B666ED14441D1C00CD4821 = {
+			isa = PBXGroup;
+			children = (
+				01B6670214441D1C00CD4821 /* BobsBurgers */,
+				01B6671E14441D1D00CD4821 /* BobsBurgersTests */,
+				01B666FB14441D1C00CD4821 /* Frameworks */,
+				01B666F914441D1C00CD4821 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01B666F914441D1C00CD4821 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01B666F814441D1C00CD4821 /* BobsBurgers.app */,
+				01B6671614441D1C00CD4821 /* BobsBurgersTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01B666FB14441D1C00CD4821 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01B666FC14441D1C00CD4821 /* UIKit.framework */,
+				01B666FE14441D1C00CD4821 /* Foundation.framework */,
+				01B6670014441D1C00CD4821 /* CoreGraphics.framework */,
+				01B6671714441D1C00CD4821 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01B6670214441D1C00CD4821 /* BobsBurgers */ = {
+			isa = PBXGroup;
+			children = (
+				01B6670B14441D1C00CD4821 /* BobsBurgersAppDelegate.h */,
+				01B6670C14441D1C00CD4821 /* BobsBurgersAppDelegate.m */,
+				01B6670E14441D1C00CD4821 /* MainWindow.xib */,
+				01B6670314441D1C00CD4821 /* Supporting Files */,
+			);
+			path = BobsBurgers;
+			sourceTree = "<group>";
+		};
+		01B6670314441D1C00CD4821 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01B6670414441D1C00CD4821 /* BobsBurgers-Info.plist */,
+				01B6670514441D1C00CD4821 /* InfoPlist.strings */,
+				01B6670814441D1C00CD4821 /* main.m */,
+				01B6670A14441D1C00CD4821 /* BobsBurgers-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01B6671E14441D1D00CD4821 /* BobsBurgersTests */ = {
+			isa = PBXGroup;
+			children = (
+				01B6672414441D1D00CD4821 /* BobsBurgersTests.h */,
+				01B6672614441D1D00CD4821 /* BobsBurgersTests.m */,
+				01B6671F14441D1D00CD4821 /* Supporting Files */,
+			);
+			path = BobsBurgersTests;
+			sourceTree = "<group>";
+		};
+		01B6671F14441D1D00CD4821 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				01B6672014441D1D00CD4821 /* BobsBurgersTests-Info.plist */,
+				01B6672114441D1D00CD4821 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01B666F714441D1C00CD4821 /* BobsBurgers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01B6672A14441D1D00CD4821 /* Build configuration list for PBXNativeTarget "BobsBurgers" */;
+			buildPhases = (
+				01B666F414441D1C00CD4821 /* Sources */,
+				01B666F514441D1C00CD4821 /* Frameworks */,
+				01B666F614441D1C00CD4821 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BobsBurgers;
+			productName = BobsBurgers;
+			productReference = 01B666F814441D1C00CD4821 /* BobsBurgers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01B6671514441D1C00CD4821 /* BobsBurgersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01B6672D14441D1D00CD4821 /* Build configuration list for PBXNativeTarget "BobsBurgersTests" */;
+			buildPhases = (
+				01B6671114441D1C00CD4821 /* Sources */,
+				01B6671214441D1C00CD4821 /* Frameworks */,
+				01B6671314441D1C00CD4821 /* Resources */,
+				01B6671414441D1C00CD4821 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01B6671D14441D1D00CD4821 /* PBXTargetDependency */,
+			);
+			name = BobsBurgersTests;
+			productName = BobsBurgersTests;
+			productReference = 01B6671614441D1C00CD4821 /* BobsBurgersTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01B666EF14441D1C00CD4821 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 01B666F214441D1C00CD4821 /* Build configuration list for PBXProject "BobsBurgers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 01B666ED14441D1C00CD4821;
+			productRefGroup = 01B666F914441D1C00CD4821 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01B666F714441D1C00CD4821 /* BobsBurgers */,
+				01B6671514441D1C00CD4821 /* BobsBurgersTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01B666F614441D1C00CD4821 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B6670714441D1C00CD4821 /* InfoPlist.strings in Resources */,
+				01B6671014441D1C00CD4821 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01B6671314441D1C00CD4821 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B6672314441D1D00CD4821 /* InfoPlist.strings in Resources */,
+				01B6672514441D1D00CD4821 /* BobsBurgersTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01B6671414441D1C00CD4821 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01B666F414441D1C00CD4821 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B6670914441D1C00CD4821 /* main.m in Sources */,
+				01B6670D14441D1C00CD4821 /* BobsBurgersAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01B6671114441D1C00CD4821 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B6672714441D1D00CD4821 /* BobsBurgersTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01B6671D14441D1D00CD4821 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01B666F714441D1C00CD4821 /* BobsBurgers */;
+			targetProxy = 01B6671C14441D1D00CD4821 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01B6670514441D1C00CD4821 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01B6670614441D1C00CD4821 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		01B6670E14441D1C00CD4821 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01B6670F14441D1C00CD4821 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		01B6672114441D1D00CD4821 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01B6672214441D1D00CD4821 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01B6672814441D1D00CD4821 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		01B6672914441D1D00CD4821 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01B6672B14441D1D00CD4821 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BobsBurgers/BobsBurgers-Prefix.pch";
+				INFOPLIST_FILE = "BobsBurgers/BobsBurgers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		01B6672C14441D1D00CD4821 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BobsBurgers/BobsBurgers-Prefix.pch";
+				INFOPLIST_FILE = "BobsBurgers/BobsBurgers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		01B6672E14441D1D00CD4821 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BobsBurgers.app/BobsBurgers";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BobsBurgers/BobsBurgers-Prefix.pch";
+				INFOPLIST_FILE = "BobsBurgersTests/BobsBurgersTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		01B6672F14441D1D00CD4821 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BobsBurgers.app/BobsBurgers";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BobsBurgers/BobsBurgers-Prefix.pch";
+				INFOPLIST_FILE = "BobsBurgersTests/BobsBurgersTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01B666F214441D1C00CD4821 /* Build configuration list for PBXProject "BobsBurgers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01B6672814441D1D00CD4821 /* Debug */,
+				01B6672914441D1D00CD4821 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01B6672A14441D1D00CD4821 /* Build configuration list for PBXNativeTarget "BobsBurgers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01B6672B14441D1D00CD4821 /* Debug */,
+				01B6672C14441D1D00CD4821 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		01B6672D14441D1D00CD4821 /* Build configuration list for PBXNativeTarget "BobsBurgersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01B6672E14441D1D00CD4821 /* Debug */,
+				01B6672F14441D1D00CD4821 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01B666EF14441D1C00CD4821 /* Project object */;
+}
