@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainDelegate.h"
 
-@interface WelcomeViewController : UIViewController
+@interface WelcomeViewController : UIViewController<UITextFieldDelegate> {
+    id<MainDelegate> delegate;
+    
+    UITextField *textField;
+}
+
+@property (nonatomic, assign) id<MainDelegate> delegate;
 
 @end

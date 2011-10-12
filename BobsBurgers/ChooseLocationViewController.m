@@ -9,6 +9,7 @@
 #import "ChooseLocationViewController.h"
 
 @implementation ChooseLocationViewController
+@synthesize delegate, admin, tableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,12 +30,40 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
+    self.view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 768, 1024)] autorelease];
+    
+    self.tableView = [[GroupedTableViewController alloc] initWithType:LOCATION];
+    self.tableView.delegate = self.delegate;
+    self.tableView.view.frame = CGRectMake(84, 84, 600, 856);
+    self.tableView.admin = self.admin;
+    [self.view addSubview:tableView.view];
+    
+    if (self.admin) {
+        textField = [[[UITextField alloc] initWithFrame:CGRectMake(154, 30, 300, 40)] autorelease];
+        textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+        textField.autocorrectionType = UITextAutocorrectionTypeNo;
+        textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        textField.placeholder = @"Location Name";
+        textField.borderStyle = UITextBorderStyleRoundedRect;
+        [self.view addSubview:textField];
+        
+        UIButton *addLocation = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        addLocation.frame = CGRectMake(464, 30, 150, 40);
+        [addLocation setTitle:@"Add Location" forState:UIControlStateNormal];
+        [addLocation addTarget:self action:@selector(addLocationPressed) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:addLocation];
+    }
+    
 }
-*/
+
+- (void)addLocationPressed {
+    [self.delegate addLocation:textField.text];
+}
+
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

@@ -14,10 +14,23 @@
 {
     self = [super init];
     if (self) {
-        // Initialization code here.
+        self.contentMode = UIViewContentModeScaleToFill;
     }
     
     return self;
+}
+
+-(void)loadFromURLString:(NSString*)urlString {
+    NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding]];
+    ASIHTTPRequest *req = [ASIHTTPRequest requestWithURL:url];
+    [req setRequestMethod:@"GET"];
+    [req setDelegate:self];
+    [req startAsynchronous];
+}
+
+-(void)requestFinished:(ASIHTTPRequest *)request {
+    self.image = [UIImage imageWithData:[request responseData]];
+    [self setNeedsLayout];
 }
 
 @end

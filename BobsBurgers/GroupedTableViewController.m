@@ -10,6 +10,7 @@
 
 
 @implementation GroupedTableViewController
+@synthesize sections, itemsForSections, type, delegate, admin, locationName;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -18,6 +19,21 @@
         // Custom initialization
     }
     return self;
+}
+
+- (id)initWithType:(int)t {
+    self = [super initWithStyle:UITableViewStyleGrouped];
+    if (self) {
+        self.type = t;
+        self.tableView.rowHeight = 56;
+    }
+    return self;
+}
+
+- (void)setSectionsAndItems:(NSMutableArray *)s items:(NSMutableDictionary *)i {
+    self.sections = s;
+    self.itemsForSections = i;
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,54 +94,77 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return [self.sections count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [[self.itemsForSections objectForKey:[self.sections objectAtIndex:section]] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
+    AsyncImageView *itemImageView;
+    UILabel *itemName;
+    UILabel *itemPrice;
+    
+    UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+        
+        if (self.type==MENU) {
+            itemImageView = [[[AsyncImageView alloc] initWithFrame:CGRectMake(5, 5, 46, 46)] autorelease];
+            [cell.contentView addSubview:itemImageView];
+            itemName = [[[UILabel alloc] initWithFrame:CGRectMake(58, 5, 300, 46)] autorelease];
+            [cell.contentView addSubview:itemName];
+            itemPrice = [[[UILabel alloc] initWithFrame:CGRectMake(348, 5, 100, 46)] autorelease];
+            itemPrice.textAlignment = UITextAlignmentRight;
+            [cell.contentView addSubview:itemPrice];
+        }
     
     // Configure the cell...
+    if (self.type==MENU) {
+        itemName.text = [[[self.itemsForSections objectForKey:[self.sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row] objectForKey:@"name"];
+        itemPrice.text = [NSString stringWithFormat:@"$%@", [[[self.itemsForSections objectForKey:[self.sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row] objectForKey:@"price"]];
+        NSString *string = [NSString stringWithFormat:@"%@locations/%@/%@/image", BASE_URL, self.locationName, [[[self.itemsForSections objectForKey:[self.sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row] objectForKey:@"name"]];
+        [itemImageView loadFromURLString:string];
+    } else {
+        cell.textLabel.text = [[self.itemsForSections objectForKey:[self.sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    }
     
     return cell;
 }
 
-/*
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [self.sections objectAtIndex:section];
+}
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return self.admin;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        if (self.type==LOCATION) {
+            [self.delegate deleteLocation:[[self.itemsForSections objectForKey:[self.sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row]];
+            [[self.itemsForSections objectForKey:[self.sections objectAtIndex:indexPath.section]] removeObjectAtIndex:indexPath.row];
+        }
+        if (self.type==MENU) {
+            [self.delegate deleteItem:[[[self.itemsForSections objectForKey:[self.sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row] objectForKey:@"name"]];
+            [[self.itemsForSections objectForKey:[self.sections objectAtIndex:indexPath.section]] removeObjectAtIndex:indexPath.row];
+        }
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -147,14 +186,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (!self.admin && self.type==MENU) return;
+    if (self.type==MENU) {
+        [self.delegate tableRowSelected:[[[self.itemsForSections objectForKey:[self.sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row] objectForKey:@"name"] from:self.type admin:self.admin];
+        
+    } else {
+        [self.delegate tableRowSelected:[[self.itemsForSections objectForKey:[self.sections objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row] from:self.type admin:self.admin];
+    }
+    
+}
+
+- (void)dealloc {
+    [sections release];
+    [itemsForSections release];
+    [locationName release];
+    [super dealloc];
 }
 
 @end

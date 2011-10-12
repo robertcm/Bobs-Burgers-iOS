@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASIHTTPRequest.h"
 
-@interface AsyncImageView : UIImageView
+@interface AsyncImageView : UIImageView<ASIHTTPRequestDelegate>
+
+-(void)loadFromURLString:(NSString*)urlString;
 
 @end

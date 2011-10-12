@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GroupedTableViewController.h"
+#import "MainDelegate.h"
 
-@interface ChooseLocationViewController : UIViewController
+@interface ChooseLocationViewController : UIViewController {
+    id<MainDelegate> delegate;
+    BOOL admin;
+    UITextField *textField;
+    GroupedTableViewController *tableView;
+}
 
+@property BOOL admin;
+@property (nonatomic, assign) id<MainDelegate> delegate;
+@property (nonatomic, retain) GroupedTableViewController *tableView;
 @end
